@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+  <property name="hibernate.connection.driver_class">${myia.connection.driver_class}</property>
+  <property name="hibernate.connection.password">${myia.connection.password}</property>
+  <property name="hibernate.connection.url">${myia.connection.url}</property>
+  <property name="hibernate.connection.username">${myia.connection.username}</property>
+  <property name="hibernate.default_schema">${myia.default_schema}</property>
+  <property name="hibernate.dialect">${myia.dialect}</property>
+  <property name="hibernate.hbm2ddl.auto">${myia.hbm2ddl.auto}</property>
+  <property name="hibernate.show_sql">${myia.show_sql}</property>
+  <property name="hibernate.event.merge.entity_copy_observer">allow</property>
+  <property name="hibernate.search.default.directory_provider">filesystem</property>
+  <property name="hibernate.search.default.indexBase">${jboss.server.tmp.dir}/lucene</property>
+  <property name="hibernate.search.default.indexmanager">near-real-time</property>
+  <property name="hibernate.c3p0.min_size">5</property>
+  <property name="hibernate.c3p0.max_size">300</property>
+  <property name="hibernate.c3p0.timeout">1800</property>
+  <property name="hibernate.c3p0.max_statement">50</property>
+  <property name="hibernate.max_fetch_depth">9</property>
+  <property name="hibernate.jdbc.fetch_size">100</property>
+  <property name="hibernate.jdbc.batch_size">30</property>
+  <property name="hibernate.connection.pool_size">300</property>
+  <!-- ======================entity=========================== -->
+  <mapping class="com.myia.entity.User"/>
+   <mapping class="com.myia.entity.Bebe"/>
+    <mapping class="com.myia.entity.Note"/>
+     <mapping class="com.myia.entity.Statistique"/>
+      <mapping class="com.myia.entity.Rappel"/>
+ </session-factory>
+</hibernate-configuration>

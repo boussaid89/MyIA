@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11 juin 2020 09:42:26 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.myia.entity.Statistique" table="STATISTIQUE">
+        <id name="id" type="java.lang.Long">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="poids" type="java.lang.String">
+            <column name="POIDS" />
+        </property>
+        <property name="temperature" type="java.lang.String">
+            <column name="TEMPERATURE" />
+        </property>
+        <property name="vaccin" type="java.lang.String">
+            <column name="VACCIN" />
+        </property>
+        <property name="repas" type="java.lang.String">
+            <column name="REPAS" />
+        </property>
+        <property name="datemodified" type="java.util.Date">
+            <column name="DATEMODIFIED" />
+        </property>
+        <property name="datecreated" type="java.util.Date">
+            <column name="DATECREATED" />
+        </property>
+    </class>
+</hibernate-mapping>

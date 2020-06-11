@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11 juin 2020 09:42:26 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.myia.entity.Bebe" table="BEBE">
+        <id name="id" type="java.lang.Long">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        <property name="forName" type="java.lang.String">
+            <column name="FORNAME" />
+        </property>
+        <property name="sex" type="java.lang.String">
+            <column name="SEX" />
+        </property>
+        <property name="dateBirth" type="java.util.Date">
+            <column name="DATEBIRTH" />
+        </property>
+        <many-to-one name="user" class="com.myia.entity.User" fetch="join">
+            <column name="USER" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
